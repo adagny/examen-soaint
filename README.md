@@ -19,7 +19,7 @@ localhost:8090/cliente/registrar
 
 # header
 content-type:application/json
-Authentication:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYXJsaXRvcyIsImV4cCI6MTYxMTY1NzU1OSwiaWF0IjoxNjExNjM5NTU5fQ.wKt5sKgDInLLygo3KqbTkXIpXtE3xm8-T2dUQMh7opQR75CD7SlwY2Oy7HLdWAuu9vIh3_TaixNhB9VIQ5zwDQ
+Authentication:Bearer "jwt"
 
 # body
 {
@@ -29,3 +29,25 @@ Authentication:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYXJsaXRvcyIsImV4cCI6MTYxM
 "telefono":"977163503",
 "email":"carlosxavez1992@gmail.com"
 }
+
+# Registrar producto
+# post request
+localhost:8090/producto/registrar
+
+# header
+content-type:application/json
+Authentication:Bearer "jwt"
+
+# body
+{
+"nombre":"Camisa",
+"precio":"30"
+}
+
+# Consultar cliente
+# get request
+localhost:8090/producto/{idProducto}
+
+# header
+content-type:application/json
+Authentication:Bearer "jwt"
