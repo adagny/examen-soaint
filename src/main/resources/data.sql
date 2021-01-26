@@ -1,0 +1,1 @@
+INSERT INTO CLIENTE(nombre,apellido,dni,telefono,email) values("Carlos","Chavez","73060601","977163503","carlosxavez1992@gmail.com");
