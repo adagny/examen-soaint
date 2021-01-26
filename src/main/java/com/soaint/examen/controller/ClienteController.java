@@ -8,22 +8,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.soaint.examen.service.ClienteService;
+import com.soaint.examen.service.impl.ClienteServiceImpl;
 import com.soaint.examen.sqlite.Cliente;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
 
+	private static final Logger LOGGER = LogManager.getLogger(ClienteController.class);
+	
 	@Autowired
-	ClienteService clienteService;
+	ClienteServiceImpl clienteService;
 
 	@PostMapping("/registrar")
 	public ResponseEntity<?> registrarCliente(@RequestBody Cliente cliente) {
 		try {
 			Cliente clienteRegistrado = clienteService.save(cliente);
+			LOGGER.info("cliente registrado");
 			return new ResponseEntity<>(clienteRegistrado, HttpStatus.CREATED);
 		} catch (Exception e) {
+			LOGGER.error("error"+e);
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}

@@ -21,19 +21,7 @@ public class Cliente {
     private String telefono;
     
     private String email;
-    
-	public Cliente(String nombre, String apellido, String dni, String telefono, String email) {
-		super();
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.dni = dni;
-		this.telefono = telefono;
-		this.email = email;
-	}
 
-	public Cliente() {
-	}
-	
 	public Integer getIdCliente() {
 		return idCliente;
 	}
