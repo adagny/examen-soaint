@@ -1,27 +1,27 @@
 # examen-soaint
 
 # iniciar sesion
-post request
+#post request
 localhost:8090/authenticate
 
-header
+#header
 content-type:application/json
 
-body
+#body
 {
 "username":"carlitos",
 "password":"password"
 }
 
 # registrar cliente
-post request
+#post request
 localhost:8090/cliente/registrar
 
-header
+#header
 content-type:application/json
 Authentication:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYXJsaXRvcyIsImV4cCI6MTYxMTY1NzU1OSwiaWF0IjoxNjExNjM5NTU5fQ.wKt5sKgDInLLygo3KqbTkXIpXtE3xm8-T2dUQMh7opQR75CD7SlwY2Oy7HLdWAuu9vIh3_TaixNhB9VIQ5zwDQ
 
-body
+#body
 {
 "nombre":"Carlos",
 "apellido":"Chavez",
